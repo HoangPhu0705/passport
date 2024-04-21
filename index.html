@@ -18,10 +18,8 @@
 	<link rel="stylesheet" href="css/flatpickr.min.css">
 	<link rel="stylesheet" href="css/glightbox.min.css">
 	<link rel="stylesheet" href="css/style.css">
-
 	<script src="https://cdn.tailwindcss.com"></script>
 
-	<title>Passport &mdash; Free Bootstrap 5 Website Template by Colorlib</title>
 	<script
 		nonce="33fd5b79-d728-4aa4-a8bb-0e742155a926">try { (function (w, d) { !function (kL, kM, kN, kO) { kL[kN] = kL[kN] || {}; kL[kN].executed = []; kL.zaraz = { deferred: [], listeners: [] }; kL.zaraz.q = []; kL.zaraz._f = function (kP) { return async function () { var kQ = Array.prototype.slice.call(arguments); kL.zaraz.q.push({ m: kP, a: kQ }) } }; for (const kR of ["track", "set", "debug"]) kL.zaraz[kR] = kL.zaraz._f(kR); kL.zaraz.init = () => { var kS = kM.getElementsByTagName(kO)[0], kT = kM.createElement(kO), kU = kM.getElementsByTagName("title")[0]; kU && (kL[kN].t = kM.getElementsByTagName("title")[0].text); kL[kN].x = Math.random(); kL[kN].w = kL.screen.width; kL[kN].h = kL.screen.height; kL[kN].j = kL.innerHeight; kL[kN].e = kL.innerWidth; kL[kN].l = kL.location.href; kL[kN].r = kM.referrer; kL[kN].k = kL.screen.colorDepth; kL[kN].n = kM.characterSet; kL[kN].o = (new Date).getTimezoneOffset(); if (kL.dataLayer) for (const kY of Object.entries(Object.entries(dataLayer).reduce(((kZ, k$) => ({ ...kZ[1], ...k$[1] })), {}))) zaraz.set(kY[0], kY[1], { scope: "page" }); kL[kN].q = []; for (; kL.zaraz.q.length;) { const la = kL.zaraz.q.shift(); kL[kN].q.push(la) } kT.defer = !0; for (const lb of [localStorage, sessionStorage]) Object.keys(lb || {}).filter((ld => ld.startsWith("_zaraz_"))).forEach((lc => { try { kL[kN]["z_" + lc.slice(7)] = JSON.parse(lb.getItem(lc)) } catch { kL[kN]["z_" + lc.slice(7)] = lb.getItem(lc) } })); kT.referrerPolicy = "origin"; kT.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(kL[kN]))); kS.parentNode.insertBefore(kT, kS) };["complete", "interactive"].includes(kM.readyState) ? zaraz.init() : kL.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, "zarazData", "script"); })(window, document) } catch (e) { throw fetch("/cdn-cgi/zaraz/t"), e; };</script>
 </head>
@@ -38,27 +36,89 @@
 	<nav class="site-nav mt-3">
 		<div class="container">
 			<div class="site-navigation">
-				<a href="index-2.html" class="logo m-0 float-start">Passport</a>
-				<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-start">
-					<li class="active"><a href="index-2.html">Home</a></li>
-					<li><a href="about.html">About us</a></li>
-					<li class="has-children">
-						<a href="#">Dropdown</a>
-						<ul class="dropdown">
-							<li><a href="#">Menu One</a></li>
-							<li class="has-children">
-								<a href="#">Menu Two</a>
-								<ul class="dropdown">
-									<li><a href="#">Sub Menu One</a></li>
-									<li><a href="#">Sub Menu Two</a></li>
-									<li><a href="#">Sub Menu Three</a></li>
-								</ul>
+				<a href="index.html" class="logo m-0 float-start">Voyageur</a>
+				<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li class="group">
+						<a href="" class="">Destinations</a>
+						<ul
+							class="absolute z-10 w-1/2 overflow-auto rounded-md border border-blue-gray-50 bg-white p-3 
+                 text-sm text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none hidden group-hover:block flex flex-row site-menu">
+							<li
+								class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight">
+								<button
+									class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200">Asia</button>
 							</li>
-							<li><a href="#">Menu Three</a></li>
+							<li
+								class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight">
+								<button
+									class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200">Africa</button>
+							</li>
+							<li
+								class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight">
+								<button
+									class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200">Europe</button>
+							</li>
+
+							<li
+								class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight">
+								<button
+									class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200">North
+									America</button>
+							</li>
+
+							<li
+								class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight">
+								<button
+									class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200">Oceania</button>
+							</li>
+							<div class="h-[1px] w-full bg-cyan-500"></div>
+
+							<div class="container">
+								<div class="flex flex-row justify-start pt-2">
+
+									<div class="flex flex-col gap-5 pr-24">
+
+										<h3><a href="">Bhutan</a></h3>
+										<h3><a href="">Brunei</a></h3>
+										<h3><a href="">Cambodia</a></h3>
+										<h3><a href="">India</a></h3>
+
+
+									</div>
+
+									<div class="flex flex-col gap-5 pr-24">
+
+										<h3><a href="">Indonesia</a></h3>
+										<h3><a href="">Japan</a></h3>
+										<h3><a href="">Laos</a></h3>
+										<h3><a href="">Malaysia</a></h3>
+
+
+									</div>
+
+
+									<div class="flex flex-col gap-5 pr-24">
+
+										<h3><a href="">Myanmar</a></h3>
+										<h3><a href="">Nepal</a></h3>
+										<h3><a href="">Vietnam</a></h3>
+										<h3><a href="">Singapore</a></h3>
+
+									</div>
+
+
+
+								</div>
+							</div>
+
+
 						</ul>
 					</li>
-					<li><a href="services.html">Services</a></li>
+					<li><a href="about.html">Theme</a></li>
 					<li><a href="blog.html">Blog</a></li>
+
+					<li><a href="services.html">How it works</a></li>
 				</ul>
 				<ul class="js-clone-nav d-none d-lg-inline-block text-end site-menu float-end">
 					<li class="cta-button"><a href="contact.html">Contact Us</a></li>
@@ -75,7 +135,7 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-5">
-					<h1 class="heading mb-5" data-aos="fade-up">It is Better to Travel Well Than to Arrive</h1>
+					<h1 class="heading mb-5" data-aos="fade-up">Unleash your inner explorer, design your journey</h1>
 					<div data-aos="fade-up">
 						<a href="https://www.youtube.com/watch?v=mwtbEGNABWU"
 							class="play-button align-items-center d-flex glightbox3">
@@ -108,9 +168,9 @@
 							d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
 					</svg>
 				</div>
-				<input type="" id="default-search"
+				<input id="search-bar" type="text" id="default-search"
 					class="block w-full p-4 ps-10 text-sm text-gray-900 border rounded-lg bg-gray-50 focus:border-gray-100"
-					placeholder="Search Location..." required />
+					placeholder="" required />
 			</div>
 		</form>
 
@@ -162,7 +222,7 @@
 
 			</div>
 
-			<div class="flex flex-wrap h-[360px] gap-5 justify-center ">
+			<div class="flex flex-wrap h-[360px] gap-5 justify-center px-10">
 
 				<a href=""
 					class="h-1/2 w-[200px] flex justify-center items-center border rounded-xl relative overflow-hidden">
@@ -170,114 +230,116 @@
 						src="https://s3-cdn.designerjourneys.com/homepagecards/1/187x186/media/1-italia-homepage20230705-1652169255708-1688544461637.webp"
 						alt="">
 
-					<h1 class="z-10 text-white font-bold text-[32px]">Italy</h1>
+					<h1 class="z-10 text-white font-bold text-[24px]">Italy</h1>
 				</a>
 
 				<a href=""
 					class="h-1/2 w-[200px] flex justify-center items-center border rounded-xl relative overflow-hidden">
 					<img class="object-cover w-full border rounded-xl absolute transition-transform duration-300 ease-in-out hover:scale-[110%]"
-						src="https://s3-cdn.designerjourneys.com/homepagecards/1/187x186/media/1-italia-homepage20230705-1652169255708-1688544461637.webp"
+						src="https://s3-cdn.designerjourneys.com/homepagecards/2/187x186/media/2-vietnam-homepage20230705-1647634983140-1688544442538.webp"
 						alt="">
 
-					<h1 class="z-10 text-white font-bold text-[32px]">Italy</h1>
+					<h1 class="z-10 text-white font-bold text-[24px]">Vietnam</h1>
 				</a>
 
 				<a href=""
 					class="h-1/2 w-[200px] flex justify-center items-center border rounded-xl relative overflow-hidden">
 					<img class="object-cover w-full border rounded-xl absolute transition-transform duration-300 ease-in-out hover:scale-[110%]"
-						src="https://s3-cdn.designerjourneys.com/homepagecards/1/187x186/media/1-italia-homepage20230705-1652169255708-1688544461637.webp"
+						src="https://s3-cdn.designerjourneys.com/homepagecards/3/187x186/media/3-japan-homepage20230705-1647828918912-1688543985762.webp"
 						alt="">
 
-					<h1 class="z-10 text-white font-bold text-[32px]">Italy</h1>
+					<h1 class="z-10 text-white font-bold text-[24px]">Japan</h1>
 				</a>
 
 				<a href=""
 					class="h-1/2 w-[200px] flex justify-center items-center border rounded-xl relative overflow-hidden">
 					<img class="object-cover w-full border rounded-xl absolute transition-transform duration-300 ease-in-out hover:scale-[110%]"
-						src="https://s3-cdn.designerjourneys.com/homepagecards/1/187x186/media/1-italia-homepage20230705-1652169255708-1688544461637.webp"
+						src="https://s3-cdn.designerjourneys.com/homepagecards/4/187x186/media/4-australia-homepage20230705-1647828904891-1688544024001.webp"
 						alt="">
 
-					<h1 class="z-10 text-white font-bold text-[32px]">Italy</h1>
-				</a>
-
-
-				<a href=""
-					class="h-1/2 w-[200px] flex justify-center items-center border rounded-xl relative overflow-hidden">
-					<img class="object-cover w-full border rounded-xl absolute transition-transform duration-300 ease-in-out hover:scale-[110%]"
-						src="https://s3-cdn.designerjourneys.com/homepagecards/1/187x186/media/1-italia-homepage20230705-1652169255708-1688544461637.webp"
-						alt="">
-
-					<h1 class="z-10 text-white font-bold text-[32px]">Italy</h1>
+					<h1 class="z-10 text-white font-bold text-[24px]">Australia</h1>
 				</a>
 
 
 				<a href=""
 					class="h-1/2 w-[200px] flex justify-center items-center border rounded-xl relative overflow-hidden">
 					<img class="object-cover w-full border rounded-xl absolute transition-transform duration-300 ease-in-out hover:scale-[110%]"
-						src="https://s3-cdn.designerjourneys.com/homepagecards/1/187x186/media/1-italia-homepage20230705-1652169255708-1688544461637.webp"
+						src="https://s3-cdn.designerjourneys.com/homepagecards/5/187x186/media/5-morocco-homepage20230705-1647635074087-1688544053151.webp"
 						alt="">
 
-					<h1 class="z-10 text-white font-bold text-[32px]">Italy</h1>
+					<h1 class="z-10 text-white font-bold text-[24px]">Morocco</h1>
 				</a>
 
 
 				<a href=""
 					class="h-1/2 w-[200px] flex justify-center items-center border rounded-xl relative overflow-hidden">
 					<img class="object-cover w-full border rounded-xl absolute transition-transform duration-300 ease-in-out hover:scale-[110%]"
-						src="https://s3-cdn.designerjourneys.com/homepagecards/1/187x186/media/1-italia-homepage20230705-1652169255708-1688544461637.webp"
+						src="https://s3-cdn.designerjourneys.com/homepagecards/6/187x186/media/6-turkey-homepage20230705-1688544089073.webp"
 						alt="">
 
-					<h1 class="z-10 text-white font-bold text-[32px]">Italy</h1>
+					<h1 class="z-10 text-white font-bold text-[24px]">Turkey</h1>
+				</a>
+
+
+				<a href=""
+					class="h-1/2 w-[200px] flex justify-center items-center border rounded-xl relative overflow-hidden">
+					<img class="object-cover w-full border rounded-xl absolute transition-transform duration-300 ease-in-out hover:scale-[110%]"
+						src="https://s3-cdn.designerjourneys.com/homepagecards/7/187x186/media/7-united-kingdom-homepage20230705-1688544134540.webp"
+						alt="">
+
+					<h1 class="z-10 text-white font-bold text-[24px]">United Kingdom</h1>
 				</a>
 
 				<a href=""
 					class="h-1/2 w-[200px] flex justify-center items-center border rounded-xl relative overflow-hidden">
 					<img class="object-cover w-full border rounded-xl absolute transition-transform duration-300 ease-in-out hover:scale-[110%]"
-						src="https://s3-cdn.designerjourneys.com/homepagecards/1/187x186/media/1-italia-homepage20230705-1652169255708-1688544461637.webp"
+						src="https://s3-cdn.designerjourneys.com/homepagecards/8/187x186/media/thailand-1647633933308.webp"
 						alt="">
 
-					<h1 class="z-10 text-white font-bold text-[32px]">Italy</h1>
+					<h1 class="z-10 text-white font-bold text-[24px]">Thailand</h1>
 				</a>
 
 				<a href=""
 					class="h-1/2 w-[200px] flex justify-center items-center border rounded-xl relative overflow-hidden">
 					<img class="object-cover w-full border rounded-xl absolute transition-transform duration-300 ease-in-out hover:scale-[110%]"
-						src="https://s3-cdn.designerjourneys.com/homepagecards/1/187x186/media/1-italia-homepage20230705-1652169255708-1688544461637.webp"
+						src="https://s3-cdn.designerjourneys.com/homepagecards/9/187x186/media/9-spain-homepage20230705-1652169772802-1688544165344.webp"
 						alt="">
 
-					<h1 class="z-10 text-white font-bold text-[32px]">Italy</h1>
+					<h1 class="z-10 text-white font-bold text-[24px]">Spain</h1>
 				</a>
 
 				<a href=""
 					class="h-1/2 w-[200px] flex justify-center items-center border rounded-xl relative overflow-hidden">
 					<img class="object-cover w-full border rounded-xl absolute transition-transform duration-300 ease-in-out hover:scale-[110%]"
-						src="https://s3-cdn.designerjourneys.com/homepagecards/1/187x186/media/1-italia-homepage20230705-1652169255708-1688544461637.webp"
+						src="https://s3-cdn.designerjourneys.com/homepagecards/10/187x186/media/10-egypt-homepage20230705-1688544195873.webp"
 						alt="">
 
-					<h1 class="z-10 text-white font-bold text-[32px]">Italy</h1>
+					<h1 class="z-10 text-white font-bold text-[24px]">Egypt</h1>
 				</a>
 
 				<a href=""
 					class="h-1/2 w-[200px] flex justify-center items-center border rounded-xl relative overflow-hidden">
 					<img class="object-cover w-full border rounded-xl absolute transition-transform duration-300 ease-in-out hover:scale-[110%]"
-						src="https://s3-cdn.designerjourneys.com/homepagecards/1/187x186/media/1-italia-homepage20230705-1652169255708-1688544461637.webp"
+						src="https://s3-cdn.designerjourneys.com/homepagecards/11/187x186/media/11-new-zealand-homepage20230705-1688544234880.webp"
 						alt="">
 
-					<h1 class="z-10 text-white font-bold text-[32px]">Italy</h1>
+					<h1 class="z-10 text-white font-bold text-[24px]">New Zealand</h1>
 				</a>
 
 				<a href=""
 					class="h-1/2 w-[200px] flex justify-center items-center border rounded-xl relative overflow-hidden">
 					<img class="object-cover w-full border rounded-xl absolute transition-transform duration-300 ease-in-out hover:scale-[110%]"
-						src="https://s3-cdn.designerjourneys.com/homepagecards/1/187x186/media/1-italia-homepage20230705-1652169255708-1688544461637.webp"
+						src="https://s3-cdn.designerjourneys.com/homepagecards/12/187x186/media/12-greece-homepage20230705-1688544256712.webp"
 						alt="">
 
-					<h1 class="z-10 text-white font-bold text-[32px]">Italy</h1>
+					<h1 class="z-10 text-white font-bold text-[24px]">Greece</h1>
 				</a>
 
 			</div>
 		</div>
 	</div>
+
+
 	<div class="section bg-light">
 		<div class="container">
 			<div class="row">
@@ -583,19 +645,41 @@
 	<script src="js/glightbox.min.js"></script>
 	<script src="js/custom.js"></script>
 
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
-		gtag('config', 'UA-23581568-13');
+	<script>
+		function typePlaceholder(elementId, texts, speed) {
+			var element = document.getElementById(elementId);
+			var i = 0;
+			var isDeleting = false;
+			var textIndex = 0;
+			var interval = setInterval(function () {
+				var currentText = texts[textIndex];
+
+				if (isDeleting && i > 0) {
+					element.placeholder = currentText.substring(0, i - 1);
+					i--;
+				} else if (i < currentText.length) {
+					element.placeholder += currentText.charAt(i);
+					i++;
+				} else {
+					isDeleting = true;
+				}
+
+				if (isDeleting && i <= 0) {
+					isDeleting = false;
+					i = 0;
+					// Move to the next text in the array
+					textIndex = (textIndex + 1) % texts.length;
+				}
+			}, speed);
+		}
+
+		// Example usage
+		typePlaceholder('search-bar', ['A week in Italy', 'Explore the Amalfi Coast', 'Discover the Colosseum'], 110);
+
 	</script>
-	<script defer
-		src="https://static.cloudflareinsights.com/beacon.min.js/v55bfa2fee65d44688e90c00735ed189a1713218998793"
-		integrity="sha512-FIKRFRxgD20moAo96hkZQy/5QojZDAbyx0mQ17jEGHCJc/vi0G2HXLtofwD7Q3NmivvP9at5EVgbRqOaOQb+Rg=="
-		data-cf-beacon='{"rayId":"87748ded18f29c15","b":1,"version":"2024.3.0","token":"cd0b4b3a733644fc843ef0b185f98241"}'
-		crossorigin="anonymous"></script>
+
 </body>
 
 <!-- Mirrored from preview.colorlib.com/theme/passport/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 20 Apr 2024 10:50:15 GMT -->

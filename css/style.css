@@ -1609,7 +1609,6 @@ textarea {
           transform: translateY(-50%);
           font-family: 'icomoon'; }
       .site-nav .site-navigation .site-menu .has-children .dropdown {
-        visibility: hidden;
         opacity: 0;
         top: 100%;
         z-index: 999;
