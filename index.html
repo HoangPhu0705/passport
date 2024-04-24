@@ -47,7 +47,8 @@
 							<li
 								class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight">
 								<button
-									class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200">Asia</button>
+									class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 btn_asia"
+									data-continent="asia">Asia</button>
 							</li>
 							<li
 								class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight">
@@ -57,7 +58,8 @@
 							<li
 								class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight">
 								<button
-									class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200">Europe</button>
+									class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 btn_europe"
+									 data-continent="europe">Europe</button>
 							</li>
 
 							<li
@@ -77,34 +79,43 @@
 							<div class="container">
 								<div class="flex flex-row justify-start pt-2">
 
-									<div class="flex flex-col gap-5 pr-24">
-
-										<h3><a href="">Bhutan</a></h3>
-										<h3><a href="">Brunei</a></h3>
-										<h3><a href="">Cambodia</a></h3>
-										<h3><a href="">India</a></h3>
-
-
+									<div class="flex flex-col gap-5 pr-24" data-continents="asia">
+										<h3><a href="" class = "hover:text-black hover:font-bold">Bhutan</a></h3>
+										<h3><a href="" class = "hover:text-black hover:font-bold">Brunei</a></h3>
+										<h3><a href="" class = "hover:text-black hover:font-bold">Cambodia</a></h3>
+										<h3><a href="" class = "hover:text-black hover:font-bold">India</a></h3>
 									</div>
 
-									<div class="flex flex-col gap-5 pr-24">
+									<div class="flex flex-col gap-5 pr-24" data-continents="asia">
 
-										<h3><a href="">Indonesia</a></h3>
-										<h3><a href="">Japan</a></h3>
-										<h3><a href="">Laos</a></h3>
-										<h3><a href="">Malaysia</a></h3>
+										<h3><a href="" class = "hover:text-black hover:font-bold">Indonesia</a></h3>
+										<h3><a href="" class = "hover:text-black hover:font-bold">Japan</a></h3>
+										<h3><a href="" class = "hover:text-black hover:font-bold">Laos</a></h3>
+										<h3><a href="" class = "hover:text-black hover:font-bold">Malaysia</a></h3>
+									</div>
 
-
+									<div class="flex flex-col gap-5 pr-24" data-continents="asia">
+										<h3><a href="" class = "hover:text-black hover:font-bold">Myanmar</a></h3>
+										<h3><a href="" class = "hover:text-black hover:font-bold">Nepal</a></h3>
+										<h3><a href="detail.html" class = "hover:text-black hover:font-bold">Vietnam</a></h3>
+										<h3><a href="" class = "hover:text-black hover:font-bold">Singapore</a></h3>
 									</div>
 
 
-									<div class="flex flex-col gap-5 pr-24">
 
-										<h3><a href="">Myanmar</a></h3>
-										<h3><a href="">Nepal</a></h3>
-										<h3><a href="">Vietnam</a></h3>
-										<h3><a href="">Singapore</a></h3>
+									<div class="flex flex-col gap-5 pr-24" data-continents="europe">
+										<h3><a href="" class = "hover:text-black hover:font-bold">Italy</a></h3>
+										<h3><a href="" class = "hover:text-black hover:font-bold">Belgium</a></h3>
+										<h3><a href="" class = "hover:text-black hover:font-bold">Spain</a></h3>
+										<h3><a href="" class = "hover:text-black hover:font-bold">Germany</a></h3>
+									</div>
 
+									<div class="flex flex-col gap-5 pr-24" data-continents="europe">
+
+										<h3><a href="" class = "hover:text-black hover:font-bold">France</a></h3>
+										<h3><a href="" class = "hover:text-black hover:font-bold">Netherland</a></h3>
+										<h3><a href="" class = "hover:text-black hover:font-bold">Sweden</a></h3>
+										<h3><a href="" class = "hover:text-black hover:font-bold">England</a></h3>
 									</div>
 
 
@@ -646,8 +657,50 @@
 	<script src="js/custom.js"></script>
 
 	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+	<script>
+		const asiaBtn = document.querySelectorAll('.btn_asia')[1];
+		const europeBtn = document.querySelectorAll('.btn_europe')[1];
+		const targetList = document.querySelectorAll(`[data-continents="europe"]`);
+		targetList[2].classList.add('hidden');
+		targetList[3].classList.add('hidden');
+
+		asiaBtn.addEventListener('click', function () {
+			const countryLists = document.querySelectorAll('[data-continents]');
+			countryLists.forEach(list => list.classList.add('hidden'));
+
+
+			const continent = this.getAttribute('data-continent');
+			const targetList = document.querySelectorAll(`[data-continents="${continent}"]`);
+			targetList[3].classList.remove('hidden');
+			targetList[4].classList.remove('hidden');
+			targetList[5].classList.remove('hidden');
+
+
+		});
+
+		europeBtn.addEventListener('click', function () {
+			const countryLists = document.querySelectorAll('[data-continents]');
+			countryLists.forEach(list => list.classList.add('hidden'));
+
+
+			const continent = this.getAttribute('data-continent');
+			const targetList = document.querySelectorAll(`[data-continents="${continent}"]`);
+			targetList[2].classList.remove('hidden');
+			targetList[3].classList.remove('hidden');
+
+		});
+
+
+
+
+	</script>
 
 	<script>
+
+
+
+
+
 		function typePlaceholder(elementId, texts, speed) {
 			var element = document.getElementById(elementId);
 			var i = 0;
@@ -677,6 +730,8 @@
 
 		// Example usage
 		typePlaceholder('search-bar', ['A week in Italy', 'Explore the Amalfi Coast', 'Discover the Colosseum'], 110);
+
+
 
 	</script>
 
