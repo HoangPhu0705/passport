@@ -14,126 +14,159 @@
     <link rel="stylesheet" href="css/flatpickr.min.css">
     <link rel="stylesheet" href="css/glightbox.min.css">
     <link rel="stylesheet" href="css/detail.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        .link-underline {
+            border-bottom-width: 0;
+            background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+            background-size: 0 3px;
+            background-position: 0 100%;
+            background-repeat: no-repeat;
+            border-radius: 2px;
+            transition: background-size .2s ease-in-out;
+        }
+
+        .link-underline-black {
+            border-radius: 2px;
+            background-image: linear-gradient(transparent, transparent), linear-gradient(#000, #000)
+        }
+
+        .link-underline:hover {
+            cursor: pointer;
+            background-size: 100% 3px;
+            background-position: 0 100%
+        }
+    </style>
     <title>Detail</title>
 </head>
 
 <body>
-    <div class="flex flex-row bg-white justify-start items-center px-5 py-5 gap-3 sticky top-0 w-full">
-        <div class="">
-            <a class="font-bold text-2xl">
-                <h1>Voyageur</h1>
-            </a>
+    <div class="flex flex-col sticky top-0 z-10 w-full">
+        <div class="flex flex-row bg-white justify-between items-center px-5 py-5 gap-3 ">
+            <div class="">
+                <a class="font-bold text-2xl">
+                    <h1>Voyageur</h1>
+                </a>
+            </div>
+            <div class="flex flex-row mt-1">
+                <ul class="flex flex-row gap-5 ">
+                    <li class="active py-5 link link-underline link-underline-black text-black"><a href="index.html">Home</a></li>
+                    <li class="py-5 group link link-underline link-underline-black text-black">
+                        <a href="" class="">Destinations</a>
+                        <div class="absolute w-1/2 hidden group-hover:block bg-white rounded-xl left-[-1px] mt-5">
+                            <ul
+                                class="absolute z-10 w-screen overflow-auto rounded-md border border-blue-gray-50 bg-white p-3 
+                                text-sm text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none hidden group-hover:block flex flex-row">
+                                <li
+                                    class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight inline-block">
+                                    <button
+                                        class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 btn_asia"
+                                        data-continent="asia">Asia</button>
+                                </li>
+
+                                <li
+                                    class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight inline-block">
+                                    <button
+                                        class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 "
+                                        data-continent="">Africa</button>
+                                </li>
+
+                                <li
+                                    class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight inline-block">
+                                    <button
+                                        class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 btn_europe"
+                                        data-continent="europe">Europe</button>
+                                </li>
+
+                                <li
+                                    class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight inline-block">
+                                    <button
+                                        class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200"
+                                        data-continent="">North America </button>
+                                </li>
+
+                                <li
+                                    class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight inline-block">
+                                    <button
+                                        class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200"
+                                        data-continent="">Oceania</button>
+                                </li>
+
+                                <div class="h-[1px] w-full bg-cyan-500"></div>
+                                <div class="container">
+                                    <div class="flex flex-row justify-start pt-2">
+
+                                        <div class="flex flex-col gap-5 pr-24" data-continents="asia">
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Bhutan</a></h3>
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Brunei</a></h3>
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Cambodia</a></h3>
+                                            <h3><a href="" class="hover:text-black hover:font-bold">India</a></h3>
+                                        </div>
+
+                                        <div class="flex flex-col gap-5 pr-24" data-continents="asia">
+
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Indonesia</a></h3>
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Japan</a></h3>
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Laos</a></h3>
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Malaysia</a></h3>
+                                        </div>
+
+                                        <div class="flex flex-col gap-5 pr-24" data-continents="asia">
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Myanmar</a></h3>
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Nepal</a></h3>
+                                            <h3><a href="detail.html"
+                                                    class="hover:text-black hover:font-bold">Vietnam</a>
+                                            </h3>
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Singapore</a></h3>
+                                        </div>
+
+
+
+                                        <div class="flex flex-col gap-5 pr-24" data-continents="europe">
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Italy</a></h3>
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Belgium</a></h3>
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Spain</a></h3>
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Germany</a></h3>
+                                        </div>
+
+                                        <div class="flex flex-col gap-5 pr-24" data-continents="europe">
+
+                                            <h3><a href="" class="hover:text-black hover:font-bold">France</a></h3>
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Netherland</a></h3>
+                                            <h3><a href="" class="hover:text-black hover:font-bold">Sweden</a></h3>
+                                            <h3><a href="" class="hover:text-black hover:font-bold">England</a></h3>
+                                        </div>
+
+
+
+                                    </div>
+                            </ul>
+
+
+
+                        </div>
+                    </li>
+
+
+                    <li class="py-5 link link-underline link-underline-black text-black"><a href="" class="">Theme</a></li>
+                    <li class="py-5 link link-underline link-underline-black text-black"><a href="" class="">Blog</a></li>
+                    <li class="py-5 link link-underline link-underline-black text-black"><a href="" class="">How it work</a></li>
+                </ul>
+
+            </div>
+
+
         </div>
-        <div class="flex flex-row mt-1">
-            <ul class="flex flex-row gap-5 ">
-                <li class="active py-5 "><a href="index.html">Home</a></li>
-                <li class="py-5 group">
-                    <a href="" class="">Destinations</a>
-                    <div class="absolute w-1/2 hidden group-hover:block bg-white rounded-xl left-[-1px]">
-                        <ul
-                            class="absolute z-10 w-screen overflow-auto rounded-md border border-blue-gray-50 bg-white p-3 
-                            text-sm text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none hidden group-hover:block flex flex-row">
-                            <li
-                                class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight inline-block">
-                                <button
-                                    class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 btn_asia"
-                                    data-continent="asia">Asia</button>
-                            </li>
 
-                            <li
-                                class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight inline-block">
-                                <button
-                                    class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 btn_asia"
-                                    data-continent="asia">Africa</button>
-                            </li>
-
-                            <li
-                                class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight inline-block">
-                                <button
-                                    class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 btn_asia"
-                                    data-continent="asia">Europe</button>
-                            </li>
-
-                            <li
-                                class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight inline-block">
-                                <button
-                                    class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 btn_asia"
-                                    data-continent="asia">North America </button>
-                            </li>
-
-                            <li
-                                class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight inline-block">
-                                <button
-                                    class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 btn_asia"
-                                    data-continent="asia">Oceania</button>
-                            </li>
-
-                            <div class="h-[1px] w-full bg-cyan-500"></div>
-                            <div class="container">
-                                <div class="flex flex-row justify-start pt-2">
-
-                                    <div class="flex flex-col gap-5 pr-24" data-continents="asia">
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Bhutan</a></h3>
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Brunei</a></h3>
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Cambodia</a></h3>
-                                        <h3><a href="" class="hover:text-black hover:font-bold">India</a></h3>
-                                    </div>
-
-                                    <div class="flex flex-col gap-5 pr-24" data-continents="asia">
-
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Indonesia</a></h3>
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Japan</a></h3>
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Laos</a></h3>
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Malaysia</a></h3>
-                                    </div>
-
-                                    <div class="flex flex-col gap-5 pr-24" data-continents="asia">
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Myanmar</a></h3>
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Nepal</a></h3>
-                                        <h3><a href="detail.html" class="hover:text-black hover:font-bold">Vietnam</a>
-                                        </h3>
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Singapore</a></h3>
-                                    </div>
-
-
-
-                                    <div class="flex flex-col gap-5 pr-24" data-continents="europe">
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Italy</a></h3>
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Belgium</a></h3>
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Spain</a></h3>
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Germany</a></h3>
-                                    </div>
-
-                                    <div class="flex flex-col gap-5 pr-24" data-continents="europe">
-
-                                        <h3><a href="" class="hover:text-black hover:font-bold">France</a></h3>
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Netherland</a></h3>
-                                        <h3><a href="" class="hover:text-black hover:font-bold">Sweden</a></h3>
-                                        <h3><a href="" class="hover:text-black hover:font-bold">England</a></h3>
-                                    </div>
-
-
-
-                                </div>
-                        </ul>
-
-
-
-                    </div>
-                </li>
-
-
-                <li class="py-5 "><a href="" class="">Theme</a></li>
-                <li class="py-5 "><a href="" class="">Blog</a></li>
-                <li class="py-5 "><a href="" class="">How it work</a></li>
-            </ul>
-        </div>
-
+        <div class="w-full h-[1px] bg-slate-200"></div>
 
     </div>
+
+
 
 
     <div class="w-full h-screen px-[20rem] mt-16">
@@ -162,34 +195,214 @@
 
         </div>
 
-        <div class="h-full w-full flex mt-5 gap-5">
+        <div class="h-screen w-full flex mt-5 gap-10">
             <div class="flex-1">
-            </div>
-    
-    
-    
-    
-            <div class="flex-none">
-                <!-- Price card -->
-                <div class="flex flex-col border border-black rounded-lg w-[24rem] h-[13rem] bg-white justify-center items-center gap-3 px-4">
-                    <p class = "text-black text-sm"> <i class="fa-solid fa-ticket mr-1"></i>Lowest price starting from</p>
+                <div class="relative w-full bg-black h-80 rounded-2xl">
+                    <img class="rounded-2xl h-full w-full object-cover"
+                        src="https://s3-cdn.designerjourneys.com/expert/2455/images/proposal/44581/908x396/media/banner-shutterstock-632121377-1--1660793717592.webp"
+                        alt="">
+                    <button
+                        class="absolute bottom-0 right-0 rounded-xl w-40 py-2 text-white font-bold m-3 backdrop-blur-xl"><i
+                            class="fa-regular fa-images text-white mr-2"></i>See all photos</button>
+                </div>
 
+                <div class="flex gap-6 px-1 mt-5">
                     <div class="flex flex-col">
-                        <p class = "font-medium text-xl">AU$ <span class = "text-3xl font-bold">1,048   </span>   </p>
-                        <span class = "text-sm font-thin">per travelling sharing</span>
-                        
+                        <p class="text-slate-500 text-xs font-bold">STAY</p>
+                        <p class="text-sm">4 nights accomodation</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-slate-500 text-xs font-bold">DO</p>
+                        <p class="text-sm">6 activities</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-slate-500 text-xs font-bold">ENJOY</p>
+                        <p class="text-sm">4 breakfasts and 2 lunches</p>
+                    </div>
+                </div>
+
+                <h1 class="text-3xl font-bold mt-10">Extraordinary Experience</h1>
+                <ul class="flex flex-col space-y-3 mt-5">
+                    <li class=""> <i class="fa-solid fa-star mr-2"></i>Visit the biggest flower market, Ho Thi Ky, by
+                        rickshaw ride</li>
+                    <li class=""><i class="fa-solid fa-star mr-2"></i>Eat delicious food during food tour in the
+                        Cambodian market</li>
+                    <li class=""><i class="fa-solid fa-star mr-2"></i>Enjoy the rustic local life of the Mekong Delta in
+                        the homestay</li>
+                    <li class=""><i class="fa-solid fa-star mr-2"></i>Visit the Cu Chi tunnels, excellent war museums
+                        and learn about the former Saigon's history</li>
+                    <li class=""><i class="fa-solid fa-star mr-2"></i>Watch the hectic trading scenes at the floating
+                        markets</li>
+                </ul>
+
+
+                <h1 class="text-3xl font-bold mt-10">Overview</h1>
+                <p class="mt-5 pr-20">Southern Vietnam has a vast river and canal system with a rich history of trade
+                    and transportation, and it is located right outside Ho Chi Minh City!
+                    These waterways are well known for their role in the Vietnam-American War.</p>
+
+
+                <p class="mt-5 pr-20">Southern Vietnam has a vast river and canal system with a rich history of trade
+                    and transportation, and it is located right outside Ho Chi Minh City!
+                    These waterways are well known for their role in the Vietnam-American War.</p>
+
+                <p class="mt-5 pr-20">You will also have a chance to visit the biggest flower market, Ho Thi Ky, by
+                    rickshaw ride. When you visit this market, you will not only be able to admire the beauty and smell
+                    of hundreds of exotic flowers, but you will also be able to eat delicious food in the Cambodian
+                    market (Le Hong Phong market), where many Cambodian merchants offer Cambodian products and
+                    delicacies.
+                </p>
+
+                <p class="my-5 pr-20">During the trip, you will stay at the homestay far from the hustle and bustle of
+                    the metropolitan areas, within a tranquil and serene environment in which you will appreciate and
+                    enjoy the rustic local life of the Mekong Delta.</p>
+
+
+                <hr>
+                <div class="flex gap-5 mt-5">
+                    <div
+                        class="rounded-xl bg-cyan-300 w-[120px] h-[120px] flex flex-col justify-center items-center gap-2">
+                        <img class="w-1/3 h-1/3"
+                            src="https://s3-cdn.designerjourneys.com/static/icons/activities/Sightseeing.svg" alt="">
+                        <p class="text-slate-500 text-sm font-bold">Sightseeing</p>
                     </div>
 
-                    <button type="button" class="focus:outline-none text-white bg-emerald-600 hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 w-full"><span class = "font-bold">Customize for free</span></button>
+                    <div
+                        class="rounded-xl bg-cyan-300 w-[120px] h-[120px] flex flex-col justify-center items-center gap-2">
+                        <img class="w-1/3 h-1/3"
+                            src="https://s3-cdn.designerjourneys.com/static/icons/activities/Cycling.svg" alt="">
+                        <p class="text-slate-500 text-sm font-bold">Cycling</p>
+                    </div>
+
+                    <div
+                        class="rounded-xl bg-cyan-300 w-[120px] h-[120px] flex flex-col justify-center items-center gap-2">
+                        <img class="w-1/3 h-1/3"
+                            src="https://s3-cdn.designerjourneys.com/static/icons/activities/Cruising.svg" alt="">
+                        <p class="text-slate-500 text-sm font-bold">Cruising</p>
+                    </div>
+
+                    <div
+                        class="rounded-xl bg-cyan-300 w-[120px] h-[120px] flex flex-col justify-center items-center gap-2">
+                        <img class="w-1/3 h-1/3"
+                            src="https://s3-cdn.designerjourneys.com/static/icons/activities/Cruising.svg" alt="">
+                        <p class="text-slate-500 text-sm font-bold">Food & Drink</p>
+                    </div>
+
+                </div>
 
 
-                </div>      
+                <hr class="my-5">
+
+
+            </div>
+
+
+
+
+            <div class="flex-none">
+                <!-- Price card -->
+                <div
+                    class="flex flex-col border border-black rounded-xl w-[24rem] h-[13rem] bg-white justify-center items-center gap-3 px-5">
+                    <p class="text-black text-sm"> <i class="fa-solid fa-ticket mr-1"></i>Lowest price starting from</p>
+
+                    <div class="flex flex-col">
+                        <p class="font-medium text-xl">AU$ <span class="text-3xl font-bold">1,048 </span> </p>
+                        <span class="text-sm font-thin">per travelling sharing</span>
+
+                    </div>
+
+                    <button type="button"
+                        class=" transition duration-150 ease-out hover:ease-in focus:outline-none text-white bg-emerald-600 hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 w-full"><span
+                            class="font-bold">Customize For Free</span></button>
+
+
+                </div>
+
+
+                <!-- author -->
+                <div
+                    class="flex flex-col w-[24rem] h-[20rem] border border-black rounded-xl mt-5 bg-neutral-100 p-4 gap-3 justify-center items-start">
+                    <div class="flex gap-3">
+                        <img class="rounded-full w-24 h-24"
+                            src="https://scontent.fhan3-2.fna.fbcdn.net/v/t39.30808-1/387044256_3560293254298307_791437703428727790_n.jpg?stp=dst-jpg_s200x200&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Nuf0x9znKqMAb4qVHuq&_nc_ht=scontent.fhan3-2.fna&oh=00_AfBwD-WaM3JWHXKeKFP1M7fY1zN7n3hYrISQ2DDMRNiEfg&oe=663004F4"
+                            alt="Rounded avatar">
+
+                        <div class="flex flex-col">
+                            <p class="text-2xl font-bold">Hoang N.</p>
+                            <div class="flex gap-2 mt-1">
+                                <span class="text-xs font-bold"><i
+                                        class="fa-solid fa-check text-blue-300 mr-2"></i>Verified</span>
+                                <span class="text-xs font-bold"><i
+                                        class="fa-solid fa-certificate text-blue-300 mr-2"></i>Approved</span>
+                            </div>
+
+                            <span class="font-bold mt-1"><i class="fa-solid fa-star text-yellow-300 mr-2"></i>4.6</span>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="flex flex-col gap-16">
+                        <p class="text-sm">Our Local Designer and their team will design, build and deliver your
+                            extraordinary trip to Cambodia, Laos, Myanmar, Malaysia, Thailand, Vietnam and Indonesia.
+                        </p>
+
+
+                        <button
+                            class="border border-2 border-emerald-600 py-2 rounded-xl font-bold hover:border-emerald-900 hover:bg-emerald-900 hover:text-white transition duration-150 ease-out hover:ease-in"><i
+                                class="fa-regular fa-message mr-2"></i>Chat With Me</button>
+                    </div>
+
+
+
+                </div>
             </div>
         </div>
     </div>
 
 
 
+
+
+    <script>
+        const asiaBtn = document.querySelector('.btn_asia');
+        const europeBtn = document.querySelector('.btn_europe');
+        const targetList = document.querySelectorAll(`[data-continents="europe"]`);
+        targetList[0].classList.add('hidden');
+        targetList[1].classList.add('hidden');
+
+        asiaBtn.addEventListener('click', function () {
+            const countryLists = document.querySelectorAll('[data-continents]');
+            countryLists.forEach(list => list.classList.add('hidden'));
+
+
+            const continent = this.getAttribute('data-continent');
+            const targetList = document.querySelectorAll(`[data-continents="${continent}"]`);
+            targetList[0].classList.remove('hidden');
+            targetList[1].classList.remove('hidden');
+            targetList[2].classList.remove('hidden');
+
+
+        });
+
+        europeBtn.addEventListener('click', function () {
+            const countryLists = document.querySelectorAll('[data-continents]');
+            countryLists.forEach(list => list.classList.add('hidden'));
+
+
+            const continent = this.getAttribute('data-continent');
+            const targetList = document.querySelectorAll(`[data-continents="${continent}"]`);
+            console.log(targetList);
+            targetList[0].classList.remove('hidden');
+            targetList[1].classList.remove('hidden');
+
+        });
+
+
+
+
+    </script>
 
 </body>
 
