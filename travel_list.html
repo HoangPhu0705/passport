@@ -31,12 +31,12 @@
             border-radius: 2px;
             transition: background-size .2s ease-in-out;
         }
-    
+
         .link-underline-black {
             border-radius: 2px;
             background-image: linear-gradient(transparent, transparent), linear-gradient(#000, #000)
         }
-    
+
         .link-underline:hover {
             cursor: pointer;
             background-size: 100% 3px;
@@ -49,7 +49,7 @@
 
 <body>
     <!-- Navbar -->
-    <div class="flex flex-row bg-white justify-between items-center px-5 py-5 gap-3 sticky top-0 w-full">
+    <div class="flex flex-row bg-white justify-between items-center px-5 py-5 gap-3 sticky top-0 w-full z-20">
         <div class="">
             <a class="font-bold text-2xl">
                 <h1>Voyageur</h1>
@@ -57,10 +57,11 @@
         </div>
         <div class="flex flex-row mt-1">
             <ul class="flex flex-row gap-5 ">
-                <li class="active py-5 link link-underline link-underline-black text-black"><a href="index.html">Home</a></li>
+                <li class="active py-5 link link-underline link-underline-black text-black"><a
+                        href="index.html">Home</a></li>
                 <li class="py-5 group link link-underline link-underline-black text-black">
                     <a href="" class="">Destinations</a>
-                    <div class="absolute w-1/2 hidden group-hover:block bg-white rounded-xl left-[-1px] mt-5">
+                    <div class="absolute w-1/2 hidden group-hover:block bg-white rounded-xl left-[-1px] mt-[2.2rem]">
                         <ul
                             class="absolute z-10 w-screen overflow-auto rounded-md border border-blue-gray-50 bg-white p-3 
                             text-sm text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none hidden group-hover:block flex flex-row">
@@ -74,29 +75,29 @@
                             <li
                                 class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight inline-block">
                                 <button
-                                    class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 btn_asia"
-                                    data-continent="asia">Africa</button>
+                                    class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 "
+                                    data-continent="">Africa</button>
                             </li>
 
                             <li
                                 class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight inline-block">
                                 <button
-                                    class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 btn_asia"
-                                    data-continent="asia">Europe</button>
+                                    class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 btn_europe"
+                                    data-continent="europe">Europe</button>
                             </li>
 
                             <li
                                 class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight inline-block">
                                 <button
-                                    class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 btn_asia"
-                                    data-continent="asia">North America </button>
+                                    class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 "
+                                    data-continent="">North America </button>
                             </li>
 
                             <li
                                 class="cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight inline-block">
                                 <button
-                                    class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 btn_asia"
-                                    data-continent="asia">Oceania</button>
+                                    class="text-slate-700 border border-black rounded-2xl px-5 py-[3px] font-bold hover:bg-slate-200 "
+                                    data-continent="">Oceania</button>
                             </li>
 
                             <div class="h-[1px] w-full bg-cyan-500"></div>
@@ -121,7 +122,8 @@
                                     <div class="flex flex-col gap-5 pr-24" data-continents="asia">
                                         <h3><a href="" class="hover:text-black hover:font-bold">Myanmar</a></h3>
                                         <h3><a href="" class="hover:text-black hover:font-bold">Nepal</a></h3>
-                                        <h3><a href="travel_detail.html" class="hover:text-black hover:font-bold">Vietnam</a>
+                                        <h3><a href="travel_list.html"
+                                                class="hover:text-black hover:font-bold">Vietnam</a>
                                         </h3>
                                         <h3><a href="" class="hover:text-black hover:font-bold">Singapore</a></h3>
                                     </div>
@@ -156,7 +158,12 @@
 
                 <li class="py-5 link link-underline link-underline-black text-black"><a href="" class="">Theme</a></li>
                 <li class="py-5 link link-underline link-underline-black text-black"><a href="" class="">Blog</a></li>
-                <li class="py-5 link link-underline link-underline-black text-black"><a href="" class="">How it work</a></li>
+                <li class="py-5 link link-underline link-underline-black text-black"><a href="" class="">How it work</a>
+                </li>
+                <a type="button" href="enquire.html"
+                    class="ml-5 py-5 border border-1 border-black px-8 h-1/2 hover:cursor-pointer mt-3 flex justify-center items-center rounded-lg font-bold hover:text-white hover:bg-black transition ease-in">Enquire</a>
+
+
             </ul>
         </div>
 
@@ -312,7 +319,7 @@
 
             <div class="flex-1">
                 <div class="h-[4rem] flex justify-between items-center">
-                    <p class="text-2xl font-bold ">59 Tours in Vietnam</p>
+                    <p class="text-2xl font-bold ">9 Tours in Vietnam</p>
                     <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
                         class="border hover:ring-1 hover:border-blue-200 focus:ring-1 font-medium rounded-3xl text-sm px-8 h-12 text-center inline-flex items-center"
                         type="button">
@@ -354,7 +361,7 @@
 
                 <div class="grid grid-cols-3 gap-2">
                     <a href="travel_detail.html"
-                        class="bg-black rounded-4xl h-[29rem] flex flex-col justify-between border rounded-xl relative overflow-hidden">
+                        class="bg-black rounded-4xl h-[29rem] flex flex-col justify-between border rounded-xl relative overflow-hidden ">
                         <div class="flex justify-center items-start">
                             <img class="object-cover w-full h-full border absolute transition-transform duration-300 ease-in-out hover:scale-[110%] opacity-75"
                                 src="https://s3-cdn.designerjourneys.com/expert/2455/images/proposal/44581/0x400/media/banner-Saigon-by-Night-2-1594806906833.webp"
@@ -373,29 +380,29 @@
                                 alt="Rounded avatar">
                             <i class="fa-solid fa-star text-yellow-300"></i>
 
-                            <span>4.8</span>
+                            <span>4.7</span>
                         </div>
                     </a>
 
                     <a href=""
-                        class="bg-black rounded-4xl h-[29rem] flex justify-center items-start border rounded-xl relative overflow-hidden">
+                        class="bg-black rounded-4xl h-[29rem] flex justify-center items-start border rounded-xl relative overflow-hidden notin">
                         <img class="object-cover w-full h-full border absolute transition-transform duration-300 ease-in-out hover:scale-[110%] opacity-75"
                             src="https://s3-cdn.designerjourneys.com/expert/522/images/proposal/8516/908x396/media/banner-2-week-vietnam-tour-lBE-xnnC6OI-unsplash-1580895090124.webp"
                             alt="">
 
                         <div class="z-10 text-white font-bold px-4 py-4">
-                            <h1 class=" text-3xl">5-days Mekong Delta Adventure</h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 1,048</span></p>
+                            <h1 class=" text-3xl">14-Day Vietnam's Most Diverse Tour</h1>
+                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 908</span></p>
                         </div>
 
                         <div
-                            class="flex z-10 justify-start px-2 text-white font-bold absolute left-4 bottom-5 items-center gap-1">
+                            class="flex z-10 justify-start px-2 text-white font-bold absolute left-4 bottom-5 items-center gap-1 ">
                             <img class=" w-8 h-8 rounded-full ring-2 ring-white "
                                 src="https://scontent.fhan3-2.fna.fbcdn.net/v/t39.30808-1/387044256_3560293254298307_791437703428727790_n.jpg?stp=dst-jpg_s200x200&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Nuf0x9znKqMAb4qVHuq&_nc_ht=scontent.fhan3-2.fna&oh=00_AfBwD-WaM3JWHXKeKFP1M7fY1zN7n3hYrISQ2DDMRNiEfg&oe=663004F4"
                                 alt="Rounded avatar">
                             <i class="fa-solid fa-star text-yellow-300"></i>
 
-                            <span>4.8</span>
+                            <span>3.6</span>
                         </div>
                     </a>
 
@@ -407,7 +414,7 @@
 
                         <div class="z-10 text-white font-bold px-4 py-4">
                             <h1 class=" text-3xl">6-day Fabulous Mekong And Saigon</h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 1,048</span></p>
+                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 802</span></p>
                         </div>
 
                         <div
@@ -417,7 +424,7 @@
                                 alt="Rounded avatar">
                             <i class="fa-solid fa-star text-yellow-300"></i>
 
-                            <span>4.8</span>
+                            <span>4.4</span>
                         </div>
                     </a>
 
@@ -428,8 +435,8 @@
                             alt="">
 
                         <div class="z-10 text-white font-bold px-4 py-4">
-                            <h1 class=" text-3xl">5-days Mekong Delta Adventure</h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 1,048</span></p>
+                            <h1 class=" text-3xl">8-Day Discover Hill Tribes Villages</h1>
+                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 1,124</span></p>
                         </div>
 
                         <div
@@ -444,14 +451,14 @@
                     </a>
 
                     <a href=""
-                        class="bg-black rounded-4xl h-[29rem] flex justify-center items-start border rounded-xl relative overflow-hidden">
+                        class="bg-black rounded-4xl h-[29rem] flex justify-center items-start border rounded-xl relative overflow-hidden notin">
                         <img class="object-cover w-full h-full border absolute transition-transform duration-300 ease-in-out hover:scale-[110%] opacity-75"
                             src="https://s3-cdn.designerjourneys.com/expert/522/images/proposal/5804/1000x600/media/banner-vietnam-culinary-tour-464171-1523358975603-1581480900754.webp"
                             alt="">
 
                         <div class="z-10 text-white font-bold px-4 py-4">
                             <h1 class=" text-3xl">12-day Vintage Vespa </h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 1,048</span></p>
+                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 2,528</span></p>
                         </div>
 
                         <div
@@ -461,19 +468,19 @@
                                 alt="Rounded avatar">
                             <i class="fa-solid fa-star text-yellow-300"></i>
 
-                            <span>4.8</span>
+                            <span>4.2</span>
                         </div>
                     </a>
 
                     <a href=""
-                        class="bg-black rounded-4xl h-[29rem] flex justify-center items-start border rounded-xl relative overflow-hidden">
+                        class="bg-black rounded-4xl h-[29rem] flex justify-center items-start border rounded-xl relative overflow-hidden notin">
                         <img class="object-cover w-full h-full border absolute transition-transform duration-300 ease-in-out hover:scale-[110%] opacity-75"
                             src="https://s3-cdn.designerjourneys.com/expert/2864/images/proposal/53527/908x396/media/banner-1-44--1679024522699.webp"
                             alt="">
 
                         <div class="z-10 text-white font-bold px-4 py-4">
-                            <h1 class=" text-3xl">5-days Mekong Delta Adventure</h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 1,048</span></p>
+                            <h1 class=" text-3xl">16-day Saigon to Hanoi Adventure Bike Tour</h1>
+                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 563</span></p>
                         </div>
 
                         <div
@@ -483,7 +490,7 @@
                                 alt="Rounded avatar">
                             <i class="fa-solid fa-star text-yellow-300"></i>
 
-                            <span>4.8</span>
+                            <span>3.9</span>
                         </div>
                     </a>
 
@@ -494,8 +501,8 @@
                             alt="">
 
                         <div class="z-10 text-white font-bold px-4 py-4">
-                            <h1 class=" text-3xl">5-days Mekong Delta Adventure</h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 1,048</span></p>
+                            <h1 class=" text-3xl">8-Day Sneak Peek of Vietnam</h1>
+                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 859</span></p>
                         </div>
 
                         <div
@@ -505,19 +512,19 @@
                                 alt="Rounded avatar">
                             <i class="fa-solid fa-star text-yellow-300"></i>
 
-                            <span>4.8</span>
+                            <span>3.6</span>
                         </div>
                     </a>
 
                     <a href=""
-                        class="bg-black rounded-4xl h-[29rem] flex justify-center items-start border rounded-xl relative overflow-hidden">
+                        class="bg-black rounded-4xl h-[29rem] flex justify-center items-start border rounded-xl relative overflow-hidden notin">
                         <img class="object-cover w-full h-full border absolute transition-transform duration-300 ease-in-out hover:scale-[110%] opacity-75"
                             src="https://s3-cdn.designerjourneys.com/expert/790/images/proposal/8524/908x396/media/banner-halong-bay-day-tour-OZBxxRk-unsplash-1582086571990.webp"
                             alt="">
 
                         <div class="z-10 text-white font-bold px-4 py-4">
-                            <h1 class=" text-3xl">5-days Mekong Delta Adventure</h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 1,048</span></p>
+                            <h1 class=" text-3xl">1-Day On Halong Bay</h1>
+                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 1,122</span></p>
                         </div>
 
                         <div
@@ -527,19 +534,19 @@
                                 alt="Rounded avatar">
                             <i class="fa-solid fa-star text-yellow-300"></i>
 
-                            <span>4.8</span>
+                            <span>4.0</span>
                         </div>
                     </a>
 
                     <a href=""
-                        class="bg-black rounded-4xl h-[29rem] flex justify-center items-start border rounded-xl relative overflow-hidden">
+                        class="bg-black rounded-4xl h-[29rem] flex justify-center items-start border rounded-xl relative overflow-hidden notin">
                         <img class="object-cover w-full h-full border absolute transition-transform duration-300 ease-in-out hover:scale-[110%] opacity-75"
                             src="https://s3-cdn.designerjourneys.com/expert/522/images/proposal/5312/908x396/media/banner-vietnam-travel-itinerary-HLSWMxPE330-unsplash-1580976887415.webp"
                             alt="">
 
                         <div class="z-10 text-white font-bold px-4 py-4">
-                            <h1 class=" text-3xl">5-days Mekong Delta Adventure</h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 1,048</span></p>
+                            <h1 class=" text-3xl">17-Day Wonderful Vietnam Trip</h1>
+                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 898</span></p>
                         </div>
 
                         <div
@@ -549,7 +556,7 @@
                                 alt="Rounded avatar">
                             <i class="fa-solid fa-star text-yellow-300"></i>
 
-                            <span>4.8</span>
+                            <span>4.1</span>
 
                         </div>
                     </a>
@@ -569,6 +576,63 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>
+        const asiaBtn = document.querySelector('.btn_asia');
+        const europeBtn = document.querySelector('.btn_europe');
+        const targetList = document.querySelectorAll(`[data-continents="europe"]`);
+        targetList[0].classList.add('hidden');
+        targetList[1].classList.add('hidden');
+
+        asiaBtn.addEventListener('click', function () {
+            const countryLists = document.querySelectorAll('[data-continents]');
+            countryLists.forEach(list => list.classList.add('hidden'));
+
+
+            const continent = this.getAttribute('data-continent');
+            const targetList = document.querySelectorAll(`[data-continents="${continent}"]`);
+            targetList[0].classList.remove('hidden');
+            targetList[1].classList.remove('hidden');
+            targetList[2].classList.remove('hidden');
+
+
+        });
+
+        europeBtn.addEventListener('click', function () {
+            const countryLists = document.querySelectorAll('[data-continents]');
+            countryLists.forEach(list => list.classList.add('hidden'));
+
+
+            const continent = this.getAttribute('data-continent');
+            const targetList = document.querySelectorAll(`[data-continents="${continent}"]`);
+            console.log(targetList);
+            targetList[0].classList.remove('hidden');
+            targetList[1].classList.remove('hidden');
+
+        });
+
+
+        const notIncluded = document.querySelectorAll('.notin');
+        const dateChecked = document.getElementById('five-six');
+
+        // if(dateChecked.checked) {
+        //     // notIncluded.forEach(tour => tour.classList.add('hidden'))
+        //     console.log("chek");
+        // }
+
+        dateChecked.addEventListener('click', function () {
+            // Perform actions based on the checkbox's state
+            if (dateChecked.checked) {
+                notIncluded.forEach(tour => tour.classList.add('hidden'))
+            } else {
+                notIncluded.forEach(tour => tour.classList.remove('hidden'))
+
+            }
+        });
+
+    </script>
+
+
+
 
 </body>
 

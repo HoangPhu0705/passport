@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/tiny-slider.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/flatpickr.min.css">
+    <link rel="stylesheet" href="css/glightbox.min.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        .carousel-item {
+            transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+            opacity: 0.25;
+        }
+
+        .carousel-item.active {
+
+            opacity: 0.9;
+        }
+    </style>
+    <title>Enquire</title>
+</head>
+
+<body>
+    <div class="flex w-full h-screen">
+        <div class="flex-1 h-full relative">
+            <h1 class="text-4xl font-bold absolute z-10 text-white p-10">Voyageur</h1>
+            <div class="carousel w-full h-full">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="https://s3-cdn.designerjourneys.com/static/public/images/enquiryB2C/desk_01.jpg"
+                        class="w-full opacity-75" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="https://s3-cdn.designerjourneys.com/static/public/images/enquiryB2C/desk_02.jpg"
+                        class="w-full opacity-75" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="https://s3-cdn.designerjourneys.com/static/public/images/enquiryB2C/desk_03.jpg"
+                        class="w-full opacity-75" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="flex-1 bg-white relative">
+            <div class="flex flex-col">
+
+                <!-- Step 1 -->
+                <div class="flex flex-col" data-step="1">
+                    <span class="bg-neutral-400 w-1/5 h-[1rem]"></span>
+
+
+                    <div class="p-5 flex flex-col">
+                        <p class="text-slate-500 font-medium">STEP 1 OF 5</p>
+
+                        <h1 class="text-3xl font-bold text-black mt-10">ABOUT YOU</h1>
+                        <p class="text-slate-500 font-medium  border-dashed border-b-2 py-2">So we can reach you to
+                            discuss
+                            your trip</p>
+
+
+                        <form action=" " class="mt-5">
+                            <h1 class="font-bold text-black text-lg mb-2">Your name</h1>
+                            <div class="border border-gray-400 w-full h-[3rem] rounded-lg ">
+                                <input type="text" class="w-full h-full rounded-lg bg-white p-5"
+                                    placeholder="Eg: John Smith">
+                            </div>
+
+                            <h1 class="font-bold text-black text-lg mt-2 mb-2">Email</h1>
+                            <div class="">
+                                <label class="input input-bordered border-gray-400 flex items-center gap-2 bg-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        class="w-4 h-4 opacity-70">
+                                        <path
+                                            d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+                                        <path
+                                            d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+                                    </svg>
+                                    <input type="text" class="grow" placeholder="Email" />
+                                </label>
+                            </div>
+
+
+                            <h1 class="font-bold text-black text-lg mb-2 mt-2">Phone number</h1>
+                            <div class="border border-gray-400 w-full h-[3rem] rounded-lg ">
+                                <input type="text" class="w-full h-full rounded-lg bg-white p-5"
+                                    placeholder="Your number">
+                            </div>
+
+
+
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col hidden" data-step="2">
+                    <span class="bg-neutral-400 w-2/5 h-[1rem]"></span>
+
+
+                    <div class="p-5 flex flex-col">
+                        <p class="text-slate-500 font-medium">STEP 2 OF 5</p>
+
+                        <h1 class="text-3xl font-bold text-black mt-10">Your trip</h1>
+                        <p class="text-slate-500 font-medium  border-dashed border-b-2 py-2">Tell us about your plans.
+                        </p>
+
+
+                        <form action=" " class="mt-5">
+                            <h1 class="font-bold text-black text-lg mb-2">Destination</h1>
+                            <div class="border border-gray-400 w-full h-[3rem] rounded-lg ">
+
+                                <input type="text" class="w-full h-full rounded-lg bg-white p-5"
+                                    placeholder="Destination">
+                            </div>
+
+                            <h1 class="font-bold text-black text-lg mt-2 mb-2">Lenght Of Trip (days)</h1>
+                            <div class="">
+                                <label class="input input-bordered border-gray-400 flex items-center gap-2 bg-white">
+
+                                    <input type="text" class="grow" placeholder="Lenght Of Trip" />
+                                </label>
+                            </div>
+
+
+                            <h1 class="font-bold text-black text-lg mb-2 mt-2">When do you want to travel</h1>
+                            <div class="border border-gray-400 w-full h-[3rem] rounded-lg ">
+                                <input id="datepicker" type="text" class="w-full h-full rounded-lg bg-white p-5"
+                                    placeholder=" YYYY, MM, DD">
+                            </div>
+
+                            <p class="text-slate-500 font-medium text-sm mt-2">Sharing your travel dates helps us
+                                estimate an accurate price, whilst also planning the best experiences.</p>
+
+                            <h1 class="font-bold text-black text-lg mb-2 mt-2">Have you already booked your flights?
+                            </h1>
+                            <input type="radio" class="text-white" name="flight">
+                            <label for="" class="text-black"">No, I haven't booked flights</label>
+                            <br>
+                            <input type=" radio" class="bg-white" name="flight">
+                                <label for="" class="text-black"">Yes, I already have flights</label>
+
+
+
+
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class=" flex flex-col hidden" data-step="3">
+                                    <span class="bg-neutral-400 w-3/5 h-[1rem]"></span>
+
+
+                                    <div class="p-5 flex flex-col">
+                                        <p class="text-slate-500 font-medium">STEP 3 OF 5</p>
+
+                                        <h1 class="text-3xl font-bold text-black mt-10">Travellers and Accomodation</h1>
+                                        <p class="text-slate-500 font-medium  border-dashed border-b-2 py-2">How many
+                                            people are travelling, and what style of accommodation are you looking for?
+                                        </p>
+
+
+                                        <form action=" " class="mt-5">
+                                            <h1 class="font-bold text-black text-lg mb-2">How many people are
+                                                travelling?</h1>
+                                            <div class="border border-gray-400 w-full h-[3rem] rounded-lg ">
+
+                                                <input type="text" class="w-full h-full rounded-lg bg-white p-5"
+                                                    placeholder="1">
+                                            </div>
+
+                                            <h1 class="font-bold text-black text-lg mt-2 mb-2">Accommodation preference
+                                            </h1>
+                                            <div class="">
+                                                <div class="">
+                                                    <input type="checkbox" name="one-four" id="one-four"
+                                                        class="w-3 h-3 rounded-[3px] ro[3px]">
+                                                    <label for="one-four"
+                                                        class="text-sm text-slate-500 mt-2">5-star</label>
+                                                </div>
+
+
+
+                                                <div class="">
+                                                    <input type="checkbox" name="five-six" id="five-six"
+                                                        class="w-3 h-3 rounded-[3px] ">
+                                                    <label for="five-six"
+                                                        class="text-sm text-slate-500 mt-2">4-star</label>
+                                                </div>
+
+
+
+                                                <div class="">
+                                                    <input type="checkbox" name="nine-eleven" id="nine-eleven"
+                                                        class="w-3 h-3 rounded-[3px] ">
+                                                    <label for="nine-eleven"
+                                                        class="text-sm text-slate-500 mt-2">3-star</label>
+                                                </div>
+                                            </div>
+
+
+                                            <h1 class="font-bold text-black text-lg mb-2 mt-2">Ideal room configuration
+                                                <span class="text-slate-500 text-sm">(*optional)</span>
+                                            </h1>
+                                            <textarea name=""
+                                                class="w-full h-full rounded-lg bg-white p-5 border border-gray-300"
+                                                id="" cols="30" rows="4" placeholder="..."></textarea>
+
+
+                                            <p class="text-slate-500 font-medium text-sm mt-2">Tell us about your
+                                                travelling companions and your accommodation preferences (Single, Twin,
+                                                Family Room) so we can give you the best price estimate for your trip.
+                                            </p>
+
+
+
+
+
+                                        </form>
+                                    </div>
+                    </div>
+
+
+                    <!-- Step 4 -->
+                    <div class="flex flex-col hidden" data-step="4">
+                        <span class="bg-neutral-400 w-4/5 h-[1rem]"></span>
+
+
+                        <div class="p-5 flex flex-col">
+                            <p class="text-slate-500 font-medium">STEP 4 OF 5</p>
+
+                            <h1 class="text-3xl font-bold text-black mt-10">Your Style</h1>
+                            <p class="text-slate-500 font-medium  border-dashed border-b-2 py-2">You've picked a great
+                                destination, now let's make it perfect for you. Are there any essential experiences
+                                you'd like see or do?
+                            </p>
+
+
+                            <form action=" " class="mt-5">
+
+
+
+                                <h1 class="font-bold text-black text-lg mb-2 mt-2">Essential experiences to make the
+                                    perfect trip while you're in Vietnam <span
+                                        class="text-slate-500 text-sm">(*optional)</span></h1>
+                                <textarea name="" class="w-full h-full rounded-lg bg-white p-5 border border-gray-300"
+                                    id="" cols="30" rows="4" placeholder="..."></textarea>
+
+
+                                <p class="text-slate-500 font-medium text-sm mt-2 mb-2">Tell us about your travelling
+                                    companions and your accommodation preferences (Single, Twin, Family Room) so we can
+                                    give you the best price estimate for your trip.</p>
+
+                                <p>A few ideas to get you started:</p>
+                                <ul class="list-disc px-5">
+                                    <li>Are there any special sites or activities you'd like to see or do?</li>
+                                    <li>Is this trip for a specific occasion or event?</li>
+                                    <li>Is there anything that made a previous trip extra special?</li>
+                                    <li>Is there anything else you'd like to tell us about this trip?</li>
+                                </ul>
+
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+
+                    <div class="flex flex-col hidden" data-step="5">
+                        <span class="bg-neutral-400 w-full h-[1rem]"></span>
+
+
+                        <div class="p-5 flex flex-col">
+                            <p class="text-slate-500 font-medium">STEP 5 OF 5</p>
+
+                            <h1 class="text-3xl font-bold text-black mt-10">Your Budget</h1>
+                            <p class="text-slate-500 font-medium  border-dashed border-b-2 py-2">Let us know your ideal
+                                budget for this trip
+                            </p>
+
+
+                            <form action=" " class="mt-5">
+
+
+
+                                <h1 class="font-bold text-black text-lg mb-2 mt-2">My ideal budget, per person<span
+                                        class="text-slate-500 text-sm">(*optional)</span></h1>
+
+                                <div class="flex items-center">
+                                    <div class="dropdown flex-none">
+                                        <div tabindex="0" role="button"
+                                            class="border rounded-lg py-3 m-1 bg-gray-200 px-8">AUD</div>
+                                        <ul tabindex="0"
+                                            class="dropdown-content z-[1] menu px-3 py-2 shadow bg-base-100 rounded-box bg-white">
+                                            <li><a>Euro</a></li>
+                                            <li><a>US Dollar</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="border border-gray-400 w-full h-[3rem] rounded-lg flex-1">
+
+                                        <input type="text" class="w-full h-full rounded-lg bg-white p-5"
+                                            placeholder="1">
+                                    </div>
+
+
+                                </div>
+
+
+
+
+
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="absolute bottom-0 w-full h-[6rem] border-t border-slate-500">
+                        <div class="flex p-3 gap-3">
+                            <button id="btn_first"
+                                class="rounded-lg border border-gray-200 text-black hover:bg-gray-300 transition ease-in-out px-5 py-2 font-bold">How
+                                It Works</button>
+                            <button id="btn_back"
+                                class="rounded-lg border border-gray-200 text-black hover:bg-gray-300 transition ease-in-out px-5 py-2 font-bold hidden">Go
+                                back</button>
+                            <button id="btn_continue"
+                                class="flex-1 transition duration-150 ease-out hover:ease-in focus:outline-none text-white bg-emerald-600 hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 w-full">Continue
+                                To Work</button>
+                        </div>
+                        <p class="text-center text-slate-500 font-medium">Planning your trip costs nothing </p>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const slides = document.querySelectorAll('.carousel-item');
+                let currentSlide = 0;
+                const totalSlides = slides.length;
+
+                function goToSlide(slideIndex) {
+                    slides.forEach((slide, index) => {
+                        var slideLink = slide.getAttribute('id');
+
+                        slide.classList.remove('active');
+
+
+                        if (slideIndex === index) {
+
+                            window.location.replace("enquire.html#" + slideLink)
+                            slide.classList.add('active');
+
+                        }
+                    });
+                }
+
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    goToSlide(currentSlide);
+                }
+
+
+
+                goToSlide(currentSlide);
+
+                setInterval(nextSlide, 5000);
+
+
+            });
+        </script>
+
+        <script>
+            let currentStep = 0;
+            const steps = document.querySelectorAll('[data-step]');
+            const continueButton = document.getElementById('btn_continue');
+            const firstBtn = document.getElementById('btn_first');
+            const backBtn = document.getElementById('btn_back');
+
+            continueButton.addEventListener('click', () => {
+                if (currentStep > 0) {
+                    firstBtn.classList.add('hidden');
+                    backBtn.classList.remove('hidden');
+                }
+
+
+
+
+                if (currentStep < steps.length - 1) {
+                    steps[currentStep].classList.add('hidden');
+                    currentStep++;
+                    steps[currentStep].classList.remove('hidden');
+
+                }
+
+            });
+
+
+
+
+            backBtn.addEventListener('click', () => {
+
+                if (currentStep == 1) {
+                    firstBtn.classList.remove('hidden');
+                    backBtn.classList.add('hidden');
+                }
+
+                if (currentStep > 0) {
+                    steps[currentStep].classList.add('hidden');
+                    currentStep--;
+                    steps[currentStep].classList.remove('hidden');
+
+                }
+
+            });
+
+
+            if (currentStep == steps.length) {
+                continueButton.disabled = true;
+            }
+
+
+
+
+        </script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script>
+            flatpickr("#datepicker", {
+
+            });
+        </script>
+
+</body>
+
+</html>
