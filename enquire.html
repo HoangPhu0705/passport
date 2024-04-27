@@ -158,8 +158,8 @@
                             <input type="radio" class="text-white" name="flight">
                             <label for="" class="text-black"">No, I haven't booked flights</label>
                             <br>
-                            <input type="radio" class="text-white" name="flight">
-                            <label for="" class="text-black"">Yes, I already have flights</label>
+                            <input type=" radio" class="text-white" name="flight">
+                                <label for="" class="text-black"">Yes, I already have flights</label>
 
 
 
@@ -337,6 +337,29 @@
                     </div>
 
 
+                    <!-- Step complete -->
+
+                    <div class="flex flex-col hidden" data-step="6">
+                        <span class="bg-neutral-400 w-full h-[1rem]"></span>
+
+
+                        <div class="p-5 flex flex-col justify-center items-center">
+                            <p class="text-slate-500 font-medium">Completed</p>
+
+                            <h1 class="text-5xl font-bold text-black mt-10">Thank you</h1>
+                            <p class="text-slate-500 font-medium  border-1 border-b-2 py-2">We will contact you as
+                                soon as possible !
+                            </p>
+
+                            <iframe class = "p-12`" src="https://lottie.host/embed/133b81e1-94ca-4198-a7d7-f62acb442773/mwlAtzlesD.json"></iframe>
+
+
+
+
+                        </div>
+                    </div>
+
+
                     <div class="absolute bottom-0 w-full h-[6rem] border-t border-slate-500">
                         <div class="flex p-3 gap-3">
                             <button id="btn_first"
@@ -348,6 +371,9 @@
                             <button id="btn_continue"
                                 class="flex-1 transition duration-150 ease-out hover:ease-in focus:outline-none text-white bg-emerald-600 hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 w-full">Continue
                                 To Work</button>
+
+                            <a id="btn_finish" href="travel_list.html"
+                                class="flex-1 text-center transition duration-150 ease-out hover:ease-in focus:outline-none text-white bg-emerald-600 hover:opacity-75 font-medium rounded-lg text-sm px-5 py-2.5 w-full hidden">Finish</a>
                         </div>
                         <p class="text-center text-slate-500 font-medium">Planning your trip costs nothing </p>
                     </div>
@@ -403,8 +429,12 @@
             const continueButton = document.getElementById('btn_continue');
             const firstBtn = document.getElementById('btn_first');
             const backBtn = document.getElementById('btn_back');
+            const finishBtn = document.getElementById('btn_finish');
+
 
             continueButton.addEventListener('click', () => {
+                currentStep++;
+
                 if (currentStep > 0) {
                     firstBtn.classList.add('hidden');
                     backBtn.classList.remove('hidden');
@@ -414,9 +444,16 @@
 
 
                 if (currentStep < steps.length - 1) {
-                    steps[currentStep].classList.add('hidden');
-                    currentStep++;
+                    steps[currentStep - 1].classList.add('hidden');
                     steps[currentStep].classList.remove('hidden');
+
+                } else {
+                    steps[currentStep - 1].classList.add('hidden');
+                    steps[currentStep].classList.remove('hidden');
+                    continueButton.classList.add("hidden")
+                    finishBtn.classList.remove("hidden")
+
+                    backBtn.classList.add('hidden');
 
                 }
 
@@ -427,24 +464,25 @@
 
             backBtn.addEventListener('click', () => {
 
+                currentStep--;
+
                 if (currentStep == 1) {
                     firstBtn.classList.remove('hidden');
                     backBtn.classList.add('hidden');
                 }
 
                 if (currentStep > 0) {
-                    steps[currentStep].classList.add('hidden');
-                    currentStep--;
+                    steps[currentStep + 1].classList.add('hidden');
                     steps[currentStep].classList.remove('hidden');
 
                 }
 
+
+
             });
 
 
-            if (currentStep == steps.length) {
-                continueButton.disabled = true;
-            }
+
         </script>
 
         <script src="https://cdn.tailwindcss.com"></script>
@@ -455,6 +493,10 @@
 
             });
         </script>
+
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
 
 </body>
 

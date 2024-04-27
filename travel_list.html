@@ -319,7 +319,7 @@
 
             <div class="flex-1">
                 <div class="h-[4rem] flex justify-between items-center">
-                    <p class="text-2xl font-bold ">9 Tours in Vietnam</p>
+                    <p class="text-2xl font-bold "><span id = "tours_num">9</span> Tours in Vietnam</p>
                     <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
                         class="border hover:ring-1 hover:border-blue-200 focus:ring-1 font-medium rounded-3xl text-sm px-8 h-12 text-center inline-flex items-center"
                         type="button">
@@ -361,15 +361,15 @@
 
                 <div class="grid grid-cols-3 gap-2">
                     <a href="travel_detail.html"
-                        class="bg-black rounded-4xl h-[29rem] flex flex-col justify-between border rounded-xl relative overflow-hidden ">
+                        class="bg-black rounded-4xl h-[29rem] flex flex-col justify-between border rounded-xl relative overflow-hidden transition-transform duration-300 ease-in-out ">
                         <div class="flex justify-center items-start">
-                            <img class="object-cover w-full h-full border absolute transition-transform duration-300 ease-in-out hover:scale-[110%] opacity-75"
+                            <img class="object-cover w-full h-full border absolute transition-transform duration-300 ease-in-out hover:scale-[110%] opacity-75  "
                                 src="https://s3-cdn.designerjourneys.com/expert/2455/images/proposal/44581/0x400/media/banner-Saigon-by-Night-2-1594806906833.webp"
                                 alt="">
 
                             <div class="z-10 text-white font-bold px-4 py-4">
                                 <h1 class=" text-3xl">5-day Mekong Delta Adventure</h1>
-                                <p class="font-medium">From <span class="font-bold text-2xl">AU$ 1,048</span></p>
+                                <p class="font-medium">From <span class="font-bold text-2xl">USD 1,048</span></p>
                             </div>
                         </div>
 
@@ -392,7 +392,7 @@
 
                         <div class="z-10 text-white font-bold px-4 py-4">
                             <h1 class=" text-3xl">14-Day Vietnam's Most Diverse Tour</h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 908</span></p>
+                            <p class="font-medium">From <span class="font-bold text-2xl">USD 908</span></p>
                         </div>
 
                         <div
@@ -414,7 +414,7 @@
 
                         <div class="z-10 text-white font-bold px-4 py-4">
                             <h1 class=" text-3xl">6-day Fabulous Mekong And Saigon</h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 802</span></p>
+                            <p class="font-medium">From <span class="font-bold text-2xl">USD 802</span></p>
                         </div>
 
                         <div
@@ -436,7 +436,7 @@
 
                         <div class="z-10 text-white font-bold px-4 py-4">
                             <h1 class=" text-3xl">8-Day Discover Hill Tribes Villages</h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 1,124</span></p>
+                            <p class="font-medium">From <span class="font-bold text-2xl">USD 1,124</span></p>
                         </div>
 
                         <div
@@ -458,7 +458,7 @@
 
                         <div class="z-10 text-white font-bold px-4 py-4">
                             <h1 class=" text-3xl">12-day Vintage Vespa </h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 2,528</span></p>
+                            <p class="font-medium">From <span class="font-bold text-2xl">USD 2,528</span></p>
                         </div>
 
                         <div
@@ -480,7 +480,7 @@
 
                         <div class="z-10 text-white font-bold px-4 py-4">
                             <h1 class=" text-3xl">16-day Saigon to Hanoi Adventure Bike Tour</h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 563</span></p>
+                            <p class="font-medium">From <span class="font-bold text-2xl">USD 563</span></p>
                         </div>
 
                         <div
@@ -502,7 +502,7 @@
 
                         <div class="z-10 text-white font-bold px-4 py-4">
                             <h1 class=" text-3xl">8-Day Sneak Peek of Vietnam</h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 859</span></p>
+                            <p class="font-medium">From <span class="font-bold text-2xl">USD 859</span></p>
                         </div>
 
                         <div
@@ -524,7 +524,7 @@
 
                         <div class="z-10 text-white font-bold px-4 py-4">
                             <h1 class=" text-3xl">1-Day On Halong Bay</h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 1,122</span></p>
+                            <p class="font-medium">From <span class="font-bold text-2xl">USD 1,122</span></p>
                         </div>
 
                         <div
@@ -546,7 +546,7 @@
 
                         <div class="z-10 text-white font-bold px-4 py-4">
                             <h1 class=" text-3xl">17-Day Wonderful Vietnam Trip</h1>
-                            <p class="font-medium">From <span class="font-bold text-2xl">AU$ 898</span></p>
+                            <p class="font-medium">From <span class="font-bold text-2xl">USD 898</span></p>
                         </div>
 
                         <div
@@ -614,6 +614,7 @@
         const notIncluded = document.querySelectorAll('.notin');
         const dateChecked = document.getElementById('five-six');
 
+        const toursNum = document.getElementById('tours_num');
         // if(dateChecked.checked) {
         //     // notIncluded.forEach(tour => tour.classList.add('hidden'))
         //     console.log("chek");
@@ -622,9 +623,12 @@
         dateChecked.addEventListener('click', function () {
             // Perform actions based on the checkbox's state
             if (dateChecked.checked) {
+                toursNum.innerHTML = 4
                 notIncluded.forEach(tour => tour.classList.add('hidden'))
             } else {
                 notIncluded.forEach(tour => tour.classList.remove('hidden'))
+                toursNum.innerHTML = 9
+
 
             }
         });
